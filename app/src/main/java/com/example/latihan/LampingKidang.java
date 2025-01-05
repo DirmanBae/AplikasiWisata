@@ -2,6 +2,7 @@ package com.example.latihan;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,6 +35,12 @@ public class LampingKidang extends AppCompatActivity {
 
         getImageView.setImageResource(getImage);
         tvTitle.setText(getTitle);
+
+        Button btnBooking = findViewById(R.id.btnBooking);
+        btnBooking.setOnClickListener(v -> {
+            Intent intent = new Intent(LampingKidang.this, booking.class);
+            startActivity(intent);
+        });
 
 
 

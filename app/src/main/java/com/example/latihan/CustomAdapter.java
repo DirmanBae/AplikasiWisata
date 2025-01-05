@@ -41,7 +41,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomHolder> {
                 i = new Intent(context, LampingKidang.class);
                 i.putExtra("icon", customModelArrayList.get(position).getImage());
                 i.putExtra("title", customModelArrayList.get(position).getTitle());
-                i.putExtra("desc", customModelArrayList.get(position).getDesc());
                 context.startActivity(i);
             }
         });
