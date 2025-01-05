@@ -3,6 +3,7 @@ package com.example.latihan;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,13 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         Button btnLogin = findViewById(R.id.btnLogin);
+        TextView btnRegis = findViewById(R.id.btnRegis);
+
+        btnRegis.setOnClickListener(v -> {
+            Intent i = new Intent(login.this, register.class);
+            startActivity(i);
+        });
+
         btnLogin.setOnClickListener(v -> {
             Intent i = new Intent(login.this, dashboard.class);
             startActivity(i);
