@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:text="21.000"
                 android:textSize="22sp"
-                android:textColor="#23F01F"
+                android:textColor="#23F11F"
                 android:textStyle="bold"/>
         </LinearLayout>
 
