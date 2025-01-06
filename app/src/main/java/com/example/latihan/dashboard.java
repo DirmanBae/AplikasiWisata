@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -27,7 +28,11 @@ ArrayList<CustomModel> customModelArrayList = new ArrayList<>();
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_dashboard);
+
         recyclerView = findViewById(R.id.recyclerView);
+
+
+
 //        menampilkan recyclerView secara horizontal
         recyclerView.setLayoutManager(new LinearLayoutManager(dashboard.this, LinearLayoutManager.HORIZONTAL, false));
 
@@ -41,58 +46,5 @@ ArrayList<CustomModel> customModelArrayList = new ArrayList<>();
         CustomAdapter customAdapter = new CustomAdapter(this, customModelArrayList);
         recyclerView.setAdapter(customAdapter);
 
-
-
-
-
-
-//        setting data resouce
-//        dataSource = new ArrayList<>();
-//        dataSource.add("Lamping Kidang");
-//        dataSource.add("Talaga Surian");
-//        dataSource.add("Puncak Ciremai");
-//        dataSource.add("the");
-//        dataSource.add("code");
-//        dataSource.add("city");
-//        dataSource.add("Dirman");
-//
-//        linearLayoutManager = new LinearLayoutManager(dashboard.this, LinearLayoutManager.HORIZONTAL, false);
-//        myRvAdapter = new MyRvAdapter(dataSource);
-//        rv.setLayoutManager(linearLayoutManager);
-//        rv.setAdapter(myRvAdapter);
-
     }
-//    class MyRvAdapter extends RecyclerView.Adapter<MyRvAdapter.MyHolder>{
-//
-//        ArrayList<String> data;
-//        public MyRvAdapter(ArrayList<String> data) {
-//            this.data = data;
-//        }
-//
-//        @NonNull
-//        @Override
-//        public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//            View view = LayoutInflater.from(dashboard.this).inflate(R.layout.rv_item, parent, false);
-//            return new MyHolder(view);
-//        }
-//
-//        @Override
-//        public void onBindViewHolder(@NonNull MyHolder holder, int position) {
-//            holder.tvTitle.setText(data.get(position));
-//        }
-//
-//        @Override
-//        public int getItemCount() {
-//            return data.size();
-//        }
-//
-//        class MyHolder extends RecyclerView.ViewHolder{
-//            TextView tvTitle;
-//            public MyHolder(@NonNull View itemView) {
-//                super(itemView);
-//                tvTitle = itemView.findViewById(R.id.tvTitle);
-//            }
-//        }
-//
-//    }
 }

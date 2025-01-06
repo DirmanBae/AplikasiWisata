@@ -49,6 +49,18 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomHolder> {
 
     @Override
     public int getItemCount() {
+
+
         return customModelArrayList.size();
+
+
     }
+
+    public void filterList(ArrayList<CustomModel> filtereadList){
+
+        customModelArrayList = filtereadList;
+//        notifyDataSetChanged();
+
+    }
+
 }

@@ -36,32 +36,40 @@
         android:gravity="center"/>
 
     <EditText
+        android:id="@+id/inNama"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:hint="Nama Lengkap"
+        android:inputType="text"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:textColorHint="@color/white"
         android:drawableLeft="@drawable/users"
+        android:drawablePadding="10dp"
         android:padding="20dp"
         android:textColor="#ffffff"
         android:background="@drawable/bg_input" />
 
     <EditText
+        android:id="@+id/inEmail"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:hint="Masukan Email"
+        android:inputType="textEmailAddress"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:textColorHint="@color/white"
         android:textColor="#ffffff"
         android:drawableLeft="@drawable/mail1"
+        android:drawablePadding="10dp"
         android:padding="20dp"
         android:background="@drawable/bg_input" />
 
     <EditText
+        android:id="@+id/inPass"
+        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:hint="Masukan Kata Sandi"
@@ -71,10 +79,13 @@
         android:textColorHint="@color/white"
         android:textColor="#ffffff"
         android:drawableLeft="@drawable/lock2"
+        android:drawablePadding="10dp"
         android:padding="20dp"
         android:background="@drawable/bg_input" />
 
     <EditText
+        android:id="@+id/inPass2"
+        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:hint="Konfirmasi Kata Sandi"
@@ -84,11 +95,13 @@
         android:textColorHint="@color/white"
         android:textColor="#ffffff"
         android:drawableLeft="@drawable/mail1"
+        android:drawablePadding="10dp"
         android:padding="20dp"
         android:background="@drawable/bg_input" />
 
     <!--    tombol daftar-->
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegis"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Daftar"
@@ -116,27 +129,40 @@
         android:orientation="horizontal"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:gravity="center"
         >
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="google"
+            android:background="@drawable/bg_search"
+            android:layout_weight="1"
+            android:layout_marginEnd="15dp"
             android:src="@drawable/google"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="email"
+            android:background="@drawable/bg_search"
+            android:layout_weight="1"
+            android:layout_marginEnd="15dp"
             android:src="@drawable/email"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="facebook"
+            android:background="@drawable/bg_search"
+            android:layout_weight="1"
+            android:layout_marginEnd="15dp"
             android:src="@drawable/facebook"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="whatsapp"
+            android:background="@drawable/bg_search"
+            android:layout_weight="1"
             android:src="@drawable/whatsapp"/>
     </LinearLayout>
     <LinearLayout
