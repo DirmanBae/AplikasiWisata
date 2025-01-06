@@ -1,8 +1,11 @@
 package com.example.latihan;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +28,18 @@ public class LampingKidang extends AppCompatActivity {
 
         getImageView = findViewById(R.id.getImageView);
         tvTitle = findViewById(R.id.tvTitle);
+
+        ImageButton btnContact = findViewById(R.id.btnContact);
+
+        btnContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String tel = "0838224855998";
+                Intent i = new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:" + tel));
+                startActivity(i);
+            }
+        });
 
 
         Intent i = getIntent();

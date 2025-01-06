@@ -1,9 +1,12 @@
 package com.example.latihan;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +32,61 @@ public class register extends AppCompatActivity {
         Button btnRegis = findViewById(R.id.btnRegis);
 
         TextView btnLogin = findViewById(R.id.btnLogin);
+
+
+//        membuat variabel untuk button
+        ImageButton btnGoogle = findViewById(R.id.btnGoogle);
+        ImageButton btnEmail = findViewById(R.id.btnEmail);
+        ImageButton btnFacebook = findViewById(R.id.btnFacebook);
+        ImageButton btnWhatsapp = findViewById(R.id.btnWhatsapp);
+//        membuat fungsi
+
+//        daftar dengan google
+        btnGoogle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://www.google.com";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+//        daftar dengan Gmail
+        btnEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://mail.google.com/mail/u/0/#inbox";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+//        daftar dengan facebook
+        btnFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://id-id.facebook.com/login/web/";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+//        daftar dengan WhatsApp
+        btnWhatsapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://web.whatsapp.com/";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+
+
 
         btnRegis.setOnClickListener(v -> {
             String Nama = inNama.getText().toString();

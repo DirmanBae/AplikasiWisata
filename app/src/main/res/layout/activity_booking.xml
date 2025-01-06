@@ -17,10 +17,13 @@
         tools:ignore="MissingConstraints">
 
         <TextView
+            android:textStyle="bold"
+            android:background="#C5C0C0"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Your Reservoir"
             android:gravity="center"
+            android:padding="10dp"
             android:textSize="20dp"/>
     </LinearLayout>
     <LinearLayout
@@ -29,11 +32,6 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:padding="10dp">
-        <CheckBox
-            android:id="@+id/cb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="gambar" />
         <ImageView
             android:id="@+id/imgBooking"
             android:layout_width="90dp"

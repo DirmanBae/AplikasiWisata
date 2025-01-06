@@ -1,6 +1,8 @@
 package com.example.latihan;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -35,10 +37,18 @@ public class bayar extends AppCompatActivity {
 
         tvBayar.setText(Diskon);
         tvTotal.setText(Total);
+
+        Button btnMaps = findViewById(R.id.btnMaps);
+        btnMaps.setOnClickListener(v -> {
+            Intent i = new Intent(bayar.this, maps.class);
+            startActivity(i);
+        });
+
+
     }
     private String getCurrentDate() {
         // Format tanggal (contoh: 05 Januari 2025)
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd - MM - yyyy", Locale.getDefault());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
         Date date = new Date(); // Dapatkan tanggal saat ini
         return dateFormat.format(date); // Format tanggal sesuai kebutuhan
     }

@@ -28,9 +28,28 @@ public class booking extends AppCompatActivity {
         TextView totalBiaya = findViewById(R.id.total);
 
 
+//        fungsi tombol minus
+        btnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ticketCount--; // Tambahkan jumlah tiket
+                int itemTotal = ticketCount * 20000;
+                int Diskon = itemTotal - 20 * itemTotal / 100;
+                int total = Diskon + 2000;
+//                merubah hasil ke dalam string
+                String totalString = String.valueOf(total);
+                String itemTotalString = String.valueOf(itemTotal);
+                String DiskonString = String.valueOf(Diskon);
+//                menampilkan / set ke layar
+                jumTiket.setText(itemTotalString);
+                setelahDiskon.setText(DiskonString);
+                totalBiaya.setText("Rp."+" "+totalString);
+                tiket.setText(String.valueOf(ticketCount));
+            }
+        });
 
 
-
+//        fungsi tombol plus
         btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

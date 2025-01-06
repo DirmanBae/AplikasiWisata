@@ -134,6 +134,7 @@
         android:gravity="center"
         >
         <ImageButton
+            android:id="@+id/btnGoogle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="google"
@@ -142,6 +143,7 @@
             android:layout_marginEnd="15dp"
             android:src="@drawable/google"/>
         <ImageButton
+            android:id="@+id/btnEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="email"
@@ -150,6 +152,7 @@
             android:layout_marginEnd="15dp"
             android:src="@drawable/email"/>
         <ImageButton
+            android:id="@+id/btnFacebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="facebook"
@@ -158,6 +161,7 @@
             android:layout_marginEnd="15dp"
             android:src="@drawable/facebook"/>
         <ImageButton
+            android:id="@+id/btnWhatsapp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="whatsapp"

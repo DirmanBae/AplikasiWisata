@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android Basic Tutorials</string>
+    <string name="app_name">TravelKU</string>
 
 
     <string name="date">A thin wrapper around a millisecond value that allows JDBC to identify this as an SQL DATE

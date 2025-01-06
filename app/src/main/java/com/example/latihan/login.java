@@ -47,6 +47,7 @@ public class login extends AppCompatActivity {
             }else if(email.equals(Iemail) && pass.equals(Ipass)){
                 Toast.makeText(this, "Selamat Datang"+" "+email, Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(login.this, dashboard.class);
+                i.putExtra("email", email);
                 startActivity(i);
             }else{
                 Toast.makeText(this, "kombinasi Email dan Password salah", Toast.LENGTH_SHORT).show();
