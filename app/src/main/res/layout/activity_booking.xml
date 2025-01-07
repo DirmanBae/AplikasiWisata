@@ -36,7 +36,7 @@
             android:id="@+id/imgBooking"
             android:layout_width="90dp"
             android:layout_height="match_parent"
-            android:src="@drawable/mount"
+            android:src="@drawable/bg3"
             android:scaleType="centerCrop"/>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -50,6 +50,7 @@
                 android:text="Wisata Lamping Kidang \nHarga untuk 1 tiket"
                 android:textSize="20dp"/>
             <TextView
+                android:id="@+id/titleHarga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rp.20.000"
